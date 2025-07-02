@@ -1,0 +1,38 @@
+body {
+  max-width: 1200px;
+  width: 1200px;
+  margin: auto;
+}
+
+.button {
+  border: solid, #000, 1px;
+  color: #000;
+  font-size: 20px;
+  background-color: rgb(234, 232, 232);
+
+}
+
+.button_active {
+  color: #fff;
+  background-color: darkgray;
+  font-weight: 500;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.projects_list {
+  column-count: 4; 
+	column-gap: 1em;
+  margin-top: 50px;
+}
+
+.item {
+  display: inline-block; 
+	width: 100%;          
+	margin-bottom: 1em;
+	background-color: #eee;
+}
