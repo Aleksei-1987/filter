@@ -8,6 +8,8 @@ const Portfolio = () => {
 
   const onSelectedFilter = (filter) => {
     setIdActiveFilter(filter);
+    const filteredProjects = filter === "All" ? projects : projects.filter((project) => project.category === filter);
+    setProjects(filteredProjects);
   };
 
   let projects = [
@@ -81,9 +83,8 @@ const Portfolio = () => {
     },
   ];
 
-  if (selected !== "All") {
-    projects = projects.filter((project) => project.category === selected);
-  }
+  const [filteredProjects, setProjects] = useState(projects);
+  
 
   return (
     <>
@@ -92,7 +93,7 @@ const Portfolio = () => {
         selected={selected}
         onSelectedFilter={onSelectedFilter}
       />
-      <ProjectsList projects={projects} />
+      <ProjectsList projects={filteredProjects} />
     </>
   );
 }
